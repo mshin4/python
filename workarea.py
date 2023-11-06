@@ -1,10 +1,40 @@
 
-def greet():
-    print("Welcome!")
-    print("Bienvenido!")
-    print("Come on in!")
+from art import logo
 
-greet()
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
+            'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+            'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+print(logo)
+
+def caesar(text_entry, shift_amount, direction_answer):
+    code_word = ""
+    shift_amount = shift_amount % 26
+    for letter in text_entry:
+        if letter in alphabet:
+            position = alphabet.index(letter)
+            if direction_answer == "encode":
+                code_word += alphabet[position + shift_amount]
+            elif direction_answer == "decode":
+                code_word += alphabet[position - shift_amount]
+        else:
+            code_word += letter
+    print(f"The {direction_answer}d text is '{code_word}'.")
+
+continue_on = True
+while continue_on:
+    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
+    
+    caesar(text_entry=text, shift_amount=shift, direction_answer=direction)
+    
+    cipher_program = input("Do you want to restart the cipher program? (yes or no) ")
+
+    if cipher_program == "no":
+        continue_on = False
+    #print(continue_on)
+
 
 '''
 import random
