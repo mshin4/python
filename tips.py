@@ -7,8 +7,9 @@ coins_inserted += int(input("Add Nickels: ")) * .05
 coins_inserted += int(input("Add Pennies: ")) * .01
 print(f"${coins_inserted}")
 '''
-# compare two dictionaries where one is deeply nested
 
+# compare two dictionaries where one is deeply nested
+'''
 MENU = {
     "espresso": {
         "ingredients": {
@@ -49,3 +50,28 @@ def order_coffee():
             return True
 
 print(order_coffee())
+'''
+
+# multiple input values can be split into a list
+# split method will create a list and separate the entries below whenever there is a space or comma
+'''
+any_answer = input("Please enter values for variables: ").split(",")
+
+print("The value for variables are :", any_answer)
+print(any_answer[2])
+'''
+
+# lambda usage
+# you can use it almost like a class template and reuse functions as needed
+
+squared = lambda num: num * num # simple example
+print(squared(5))
+
+def myfunc(n):
+    """lambda is useful for reuisng the function with different variable names"""
+    return lambda b: b * n
+
+doubler = myfunc(2)
+tripler = myfunc(3)
+print(doubler(11))
+print(tripler(11))
