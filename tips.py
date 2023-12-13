@@ -8,6 +8,24 @@ coins_inserted += int(input("Add Pennies: ")) * .01
 print(f"${coins_inserted}")
 '''
 
+# update a dictionary value
+
+resources = {
+    "water": 200,
+    "milk": 100,
+    "coffee": 50
+}
+
+resources["water"] -= 100
+# or
+resources['water'] = 50
+# or update multiple keys' value
+
+for item in resources:
+    resources[item] *= 2
+print(resources)
+
+
 # compare two dictionaries where one is deeply nested
 '''
 MENU = {
@@ -61,9 +79,10 @@ print("The value for variables are :", any_answer)
 print(any_answer[2])
 '''
 
+
 # lambda usage
 # you can use it almost like a class template and reuse functions as needed
-
+'''
 squared = lambda num: num * num # simple example
 print(squared(5))
 
@@ -75,3 +94,4 @@ doubler = myfunc(2)
 tripler = myfunc(3)
 print(doubler(11))
 print(tripler(11))
+'''
