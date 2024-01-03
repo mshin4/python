@@ -9,7 +9,7 @@ print(f"${coins_inserted}")
 '''
 
 # update a dictionary value
-
+'''
 resources = {
     "water": 200,
     "milk": 100,
@@ -24,7 +24,7 @@ resources['water'] = 50
 for item in resources:
     resources[item] *= 2
 print(resources)
-
+'''
 
 # compare two dictionaries where one is deeply nested
 '''
@@ -97,7 +97,7 @@ print(tripler(11))
 '''
 
 # factorial function
-
+'''
 import math
 import os
 import random
@@ -116,3 +116,30 @@ if __name__ == '__main__':
 
     result = factorial(n)
     print(result)
+'''
+
+# Create multiple instances\objects using a class
+# Add the instances to a list
+# Print an attribute of each instance
+
+from turtle import Turtle, Screen
+
+colors = ["red", "orange", "green", "blue", "purple"]
+y_position = [-60, -20, 20, 60, 100]
+all_turtles = []
+screen = Screen()
+
+
+for turtle_index in range(5):
+    new_turtle = Turtle(shape="turtle")
+    new_turtle.penup()
+    new_turtle.color(colors[turtle_index])
+    new_turtle.goto(x=-100, y=y_position[turtle_index])
+    all_turtles.append(new_turtle)
+
+
+for turtle in all_turtles:
+    print(turtle.pencolor())
+
+screen.exitonclick()
+
