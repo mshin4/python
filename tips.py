@@ -1,3 +1,35 @@
+'''
+class Animal:
+
+    def __init__(self):
+        self.num_eyes = 2
+
+    def breathe(self):
+        print("inhale and exhale")
+
+
+# how to inherit a class
+class Fish(Animal):
+
+    def __init__(self):
+        super().__init__()
+
+    
+    # to alter the superclass method breathe
+    def breathe(self):
+        super().breathe()
+        print("while under water")
+
+    def swim(self):
+        print("moving in water")
+
+fishy = Fish()
+# notice this prints both from super class and subclass
+fishy.breathe()
+print(fishy.num_eyes)
+'''
+
+
 # addint inputs to a variable
 '''
 coins_inserted = 0
@@ -118,6 +150,7 @@ if __name__ == '__main__':
     print(result)
 '''
 
+'''
 # Create multiple instances\objects using a class
 # Add the instances to a list
 # Print an attribute of each instance
@@ -143,3 +176,4 @@ for turtle in all_turtles:
 
 screen.exitonclick()
 
+'''
