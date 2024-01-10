@@ -1,3 +1,27 @@
+
+# how to find and list duplicate files
+
+file_dict = {
+    "file1": "ABCDE",
+    "file2": "FGHIJ",
+    "file3": "ABCD",
+    "file4": "ABCDE"
+}
+
+
+new_dict = {}
+
+for file in file_dict:
+    file_hash = file_dict[file]
+    if file_hash in new_dict:
+        new_dict[file_hash].append(file)
+    else:
+        new_dict[file_hash] = [file]
+
+
+print(new_dict)
+
+
 '''
 class Animal:
 
