@@ -1,4 +1,31 @@
 
+# slicing
+
+list1 = ["a", "b", "c", "d", "e", "f", "g"]
+# 0-"a"-1-"b"-2-"c"-3-"d"-4-"e"-5-"f"-6-"g"-7
+
+print(list1[2:5])
+# [2:5] is 2-"c"-3-"d"-4-"e"-5
+# output ['c', 'd', 'e']
+
+print(list1[2:])
+# from 2 to the end
+# output ['c', 'd', 'e', 'f', 'g']
+
+print(list1[:5])
+# from 0 to 5
+# output ['a', 'b', 'c', 'd', 'e']
+
+print(list1[2:5:2])
+# from 2 to 5 in increments of 2
+# output ['c', 'e']
+
+print(list1[::-1])
+# all elements incremented by one starting from the end to the beginning 
+# output ['g', 'f', 'e', 'd', 'c', 'b', 'a']
+
+
+'''
 # how to find and list duplicate files
 
 file_dict = {
@@ -20,7 +47,7 @@ for file in file_dict:
 
 
 print(new_dict)
-
+'''
 
 '''
 class Animal:
