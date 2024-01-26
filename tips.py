@@ -1,5 +1,8 @@
 
-# slicing
+####################
+### slicing ########
+####################
+'''
 
 list1 = ["a", "b", "c", "d", "e", "f", "g"]
 # 0-"a"-1-"b"-2-"c"-3-"d"-4-"e"-5-"f"-6-"g"-7
@@ -23,30 +26,18 @@ print(list1[2:5:2])
 print(list1[::-1])
 # all elements incremented by one starting from the end to the beginning 
 # output ['g', 'f', 'e', 'd', 'c', 'b', 'a']
-
-
 '''
-# how to find and list duplicate files
-
-file_dict = {
-    "file1": "ABCDE",
-    "file2": "FGHIJ",
-    "file3": "ABCD",
-    "file4": "ABCDE"
-}
 
 
-new_dict = {}
 
-for file in file_dict:
-    file_hash = file_dict[file]
-    if file_hash in new_dict:
-        new_dict[file_hash].append(file)
-    else:
-        new_dict[file_hash] = [file]
-
-
-print(new_dict)
+# This compares two lists and filters out only the items not in common
+'''
+my_list1=list('Skywalker')
+#print(my_list1)
+my_list2=list('Vader')
+#print(my_list2)
+my_list3=list(filter(lambda x: x not in my_list2, my_list1))
+print(my_list3)
 '''
 
 '''
@@ -91,8 +82,12 @@ coins_inserted += int(input("Add Pennies: ")) * .01
 print(f"${coins_inserted}")
 '''
 
+#######################
+### DICTIONARIES {} ###
+#######################
+
 # update a dictionary value
-'''
+#'''
 resources = {
     "water": 200,
     "milk": 100,
@@ -107,7 +102,7 @@ resources['water'] = 50
 for item in resources:
     resources[item] *= 2
 print(resources)
-'''
+#'''
 
 # compare two dictionaries where one is deeply nested
 '''
@@ -151,6 +146,44 @@ def order_coffee():
             return True
 
 print(order_coffee())
+'''
+
+### Using Dictionary to find DUPES - how to find and list duplicate files
+'''
+file_dict = {
+    "file1": "ABCDE",
+    "file2": "FGHIJ",
+    "file3": "ABCD",
+    "file4": "ABCDE"
+}
+
+
+new_dict = {}
+
+for file in file_dict:
+    file_hash = file_dict[file]
+    if file_hash in new_dict:
+        new_dict[file_hash].append(file)
+    else:
+        new_dict[file_hash] = [file]
+
+
+print(new_dict)
+'''
+
+
+### More dictionaries - creating a dictionary looping strings
+'''
+l = {}
+for i in 'Skywalker': # Skywdlkdd
+    if i in 'Vader':
+        l[ord(i)] = i # { : a, e, r}
+else:
+    l[ord('d')] = 'd' # { a, e, r, d}
+print(l)
+for j in l.keys():
+    print(l[j], end=' ')
+
 '''
 
 # multiple input values can be split into a list
