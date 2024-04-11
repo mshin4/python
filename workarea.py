@@ -3,16 +3,40 @@ from art import logo
 from iterables import alphabet
 from iterables import files
 
-duplicate_files = {}
 
-for file in files:
-    content_hash = files[file]
-    if content_hash in duplicate_files:
-        duplicate_files[content_hash].append(file)
-    else:
-        duplicate_files[content_hash] = [file]
+def find_duplicate_files():
+    duplicate_files = {}
+    for file in files:
+        content_hash = files[file]
+        if content_hash in duplicate_files:
+            duplicate_files[content_hash].append(file)
+        else:
+            duplicate_files[content_hash] = [file]
+    return duplicate_files
 
-print(duplicate_files)
+print(find_duplicate_files())
+
+num = 5
+fact = 1
+def factorial(num):
+    list1 = []
+    list2 = []
+    variable = [x for x in rannge(num)]
+
+
+for i in range(1,num+1):
+    fact = fact * i
+
+print(fact)
+
+
+def recur_factorial(n):
+   if n == 1:
+       return n
+   else:
+       return n*recur_factorial(n-1)
+
+print(recur_factorial(5))
 
 # print(logo)
 
