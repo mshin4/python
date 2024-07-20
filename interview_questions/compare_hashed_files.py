@@ -12,3 +12,11 @@ dict = {
 
 dict_result = {}
 
+for file in dict:
+    hash = dict[file]
+    if hash in dict_result:
+        dict_result[hash].append(file)
+    else:
+        dict_result[hash] = [file]
+
+print(dict_result)
