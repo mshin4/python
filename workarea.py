@@ -3,6 +3,8 @@ from art import logo
 from iterables import alphabet
 from iterables import files
 
+words = 'There, are, commas and periods.'
+words.replace(',', '')
 
 def find_duplicate_files():
     duplicate_files = {}
@@ -14,7 +16,7 @@ def find_duplicate_files():
             duplicate_files[content_hash] = [file]
     return duplicate_files
 
-print(find_duplicate_files())
+#print(find_duplicate_files())
 
 num = 5
 fact = 1
@@ -27,7 +29,7 @@ def factorial(num):
 for i in range(1,num+1):
     fact = fact * i
 
-print(fact)
+#print(fact)
 
 
 def recur_factorial(n):
@@ -36,7 +38,7 @@ def recur_factorial(n):
    else:
        return n*recur_factorial(n-1)
 
-print(recur_factorial(5))
+#print(recur_factorial(5))
 
 # print(logo)
 

@@ -33,7 +33,7 @@ def get_longest_word(sentence):
 
 
 def get_longest_word(input_string):
-    words = input_string.replace('.', ' ').replace(',', ' ').split()
+    words = input_string.replace('.', '').replace(',', '').split()
     temp_max_word = ''
 
     for word in words:
@@ -41,6 +41,8 @@ def get_longest_word(input_string):
             temp_max_word = word
 
     return temp_max_word
+
+print(get_longest_word(sample_story))
 
 # example = "Once I'm awaken, I'll sacrifice, your soul, to the ruler of darkness."
 #
